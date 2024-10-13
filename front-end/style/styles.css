@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif sans-serif;
+}
+
+body {
+    background: url('/style/library.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(3px);
+    z-index: -1;
+}
+
+.tampilan {
+    padding: 12px;
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.tampilan img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.tampilan h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.konten {
+    max-width: 900px;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+}
+
+.kotak-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+}
+
+.kotak-form h2 {
+    text-align: center;
+    color: #007acc;
+    margin-bottom: 20px;
+}
+
+.form {
+
+    align-items: flex-start;
+}
+
+.kotak-form {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.kotak-form h2 {
+    text-align: center;
+}
+
+.inputan {
+    margin: 10px 0;
+}
+
+.inputan > label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.inputan > input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.check {
+    margin: 15px 0;
+    display: flex;
+    align-self: center;
+}
+
+.check label {
+    margin-left: 10px;
+    color: #555;
+}
+
+.form > button {
+    border: 0;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+    background-color: #007acc;
+    color: white;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.form > button:hover {
+    background-color: #005f99;
+}
+
+.book-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.belum-baca, .sudah-baca {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.belum-baca h2, .sudah-baca h2 {
+    text-align: center;
+    color: #007acc;
+    margin-bottom: 20px;
+}
+
+.selesai-button, .belum-button, .hapus-button {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s;
+}
+
+.selesai-button:hover, .belum-button:hover, .hapus-button:hover {
+    transform: scale(1.2);
+}
+    
+
+.belum-baca {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.sudah-baca {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.selesai-button {
+    width: 40px;
+    height: 40px;
+
+    background: url('/style/done.svg');
+    background-size: contain;
+    cursor: pointer;
+    border: none;
+}
+
+.belum-button {
+    width: 40px;
+    height: 40px;
+
+    background: url('/style/undone.svg');
+    background-size: contain;
+    cursor: pointer;
+    border: none;
+}
+
+.hapus-button {
+    width: 40px;
+    height: 40px;
+
+    background: url('/style/trash.svg');
+    background-size: contain;
+    cursor: pointer;
+    border: none;
+}
+
+@media (max-width: 480px) {
+    .tampilan {
+        height: 200px;
+    }
+
+    .tampilan h1 {
+        font-size: 1.5rem;
+    }
+
+    .form > button {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .inputan > input {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .kotak-form {
+        padding: 15px;
+    }
+
+    .belum-baca, .sudah-baca {
+        padding: 15px;
+    }
+
+    .selesai-button, .belum-button, .hapus-button {
+        width: 30px;
+        height: 30px;
+    }
+}

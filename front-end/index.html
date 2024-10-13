@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf App</title>
+
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+    <header class="tampilan" >
+        <img src="style/books-header.jpg" alt="Banner">
+        <h1>Bookshelf Apps</h1>
+    </header>
+  <main class="konten">
+    <section class="kotak-form">
+      <h2>Daftarkan Buku Anda</h2>
+      <form class="form" id="form">
+        <div class="inputan">
+          <label for="inputJudul">Judul Buku</label>
+          <input type="text" name="judul" id="inputJudul" required/>
+        </div>
+        <div class="inputan">
+          <label for="inputAuthor">Pengarang</label>
+          <input type="text" name="author" id="inputAuthor" required/>
+        </div>
+        <div class="inputan">
+          <label for="inputTahun">Tahun Terbit</label>
+          <input type="number" name="tahun" id="inputTahun" required/>
+        </div>
+        <div class="check">
+            <input type="checkbox" name="check" id="check" />
+            <label for="check">Tandai jika selesai membaca</label>
+        </div>
+        <button type="submit">
+          Menyesuaikan Rak
+        </button>
+      </form>
+    </section>
+
+    <div class="book-section">
+      <section class="belum-baca">
+        <h2>Belum selesai dibaca</h2>
+        <br>
+        <div class="ruang-kosong" id="item"></div>
+        <br>
+      </section>
+      <section class="sudah-baca">
+        <h2>Selesai dibaca</h2>
+        <br>
+        <div class="container" id="item-terbaca"></div>
+        <br>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
